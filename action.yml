@@ -1,0 +1,17 @@
+---
+name: build-arch-package
+description: Build an Arch Linux package
+inputs:
+  PKGBUILD:
+    description: PKGBUILD path
+    required: true
+  OUTDIR:
+    description: Output directory to store the built package (relative to $HOME)
+    required: false
+    default: $HOME/arch-packages
+branding:
+  color: blue
+  icon: archive
+runs:
+  using: node12
+  main: index.js
