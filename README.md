@@ -20,7 +20,7 @@ jobs:
 
 `%COMMIT%` in the PKGBUILD will be replaced by the commit that triggered the action.
 
-See [.github/workflows/test](.github/workflows/test) for an working example.
+See [.github/workflows/test.yml](.github/workflows/test.yml) for a working example.
 
 ### Arguments
 
