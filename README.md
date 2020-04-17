@@ -12,7 +12,7 @@ jobs:
     steps:
       ...
       - name: Build Arch Linux package
-        uses: FFY00/build-arch-package@master
+        uses: FFY00/build-arch-package@v1
         with:
           PKGBUILD: path/to/my/PKGBUILD
       ...
