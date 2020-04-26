@@ -23,7 +23,7 @@ useradd -m user
 cd /home/user
 
 # Copy PKGBUILD and *.install scripts
-cp "$PKGBUILD_DIR/*install" ./
+cp "$PKGBUILD_DIR"/*install ./
 sed "s|%COMMIT%|$GITHUB_SHA|" "$INPUT_PKGBUILD" > PKGBUILD
 chown user PKGBUILD
 
@@ -32,4 +32,4 @@ extra-x86_64-build -- -U user
 
 # Save the artifacts
 mkdir -p "$INPUT_OUTDIR"
-cp -n *.pkg.* "$INPUT_OUTDIR"/
+cp *.pkg.* "$INPUT_OUTDIR"/
