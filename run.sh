@@ -23,7 +23,7 @@ useradd -m user
 cd /home/user
 
 # Copy PKGBUILD and *.install scripts
-cp "$PKGBUILD_DIR"/*install ./
+cp "$PKGBUILD_DIR"/*install ./ || true
 sed "s|%COMMIT%|$GITHUB_SHA|" "$INPUT_PKGBUILD" > PKGBUILD
 chown user PKGBUILD
 
