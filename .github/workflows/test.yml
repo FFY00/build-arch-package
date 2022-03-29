@@ -11,6 +11,12 @@ jobs:
         - /sys/fs/cgroup:/sys/fs/cgroup
     steps:
       - uses: actions/checkout@v2
+      - name: Create PKGBUILD
+        run: |
+          cd "$GITHUB_WORKSPACE/.github/workflows/"
+          cp PKGBUILD.template PKGBUILD
+          sed -i "s|%COMMIT%|$GITHUB_SHA|" PKGBUILD
+
       - name: Build Arch Linux package
         uses: FFY00/build-arch-package@master
         with:
