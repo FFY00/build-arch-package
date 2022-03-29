@@ -18,7 +18,7 @@ pacman -Syu --noconfirm --noprogressbar --needed base-devel devtools btrfs-progs
 dbus-uuidgen --ensure=/etc/machine-id
 
 sed -i "s|MAKEFLAGS=.*|MAKEFLAGS=-j$(nproc)|" /etc/makepkg.conf
-useradd -m user
+useradd -m user || true
 cd /home/user
 
 # Copy PKGBUILD and *.install scripts
