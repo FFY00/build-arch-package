@@ -17,5 +17,11 @@ jobs:
           BUILD_SCRIPT: extra-x86_64-build
           PKGBUILD: $GITHUB_WORKSPACE/.github/workflows/PKGBUILD
           OUTDIR: $HOME/arch-packages
+      - name: Build the package again
+        uses: ./
+        with:
+          BUILD_SCRIPT: extra-x86_64-build
+          PKGBUILD: $GITHUB_WORKSPACE/.github/workflows/PKGBUILD
+          OUTDIR: $HOME/arch-packages2
 
 # See: https://github.com/taotieren/deepin-wine-qq-arch/blob/master/.github/workflows/main.yml
