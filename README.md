@@ -7,8 +7,6 @@ jobs:
     container:
       image: archlinux
       options: --privileged
-      volumes:
-        - /sys/fs/cgroup:/sys/fs/cgroup
     steps:
       ...
       - name: Build Arch Linux package
