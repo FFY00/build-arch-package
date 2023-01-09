@@ -7,7 +7,7 @@ pkgver=dummy
 pkgrel=1
 pkgdesc='build-arch-package github action test package'
 arch=('any')
-url='https://github.com/FFY00/build-arch-package'
+url='%URL%'
 license=('custom:None')
 makedepends=('git')
 source=("git+$url.git#commit=$_commit")
